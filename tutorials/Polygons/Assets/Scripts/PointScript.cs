@@ -28,7 +28,7 @@ public class PointScript : MonoBehaviour {
 			
 			LineRenderer lineRenderer = line.GetComponent<LineRenderer>();
 			if ("PointA" == gameObject.name) {
-        		lineRenderer.SetPosition(0, curPosition);
+				lineRenderer.SetPosition(0, curPosition);
 				lineRenderer.SetPosition(3, curPosition);
 			} else if ("PointB" == gameObject.name) {
 				lineRenderer.SetPosition(1, curPosition);
