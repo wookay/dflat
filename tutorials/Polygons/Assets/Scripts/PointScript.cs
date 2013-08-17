@@ -37,6 +37,6 @@ public class PointScript : MonoBehaviour {
 			}
 
 			yield return null;
-        }
-    }
+		}
+	}
 }
