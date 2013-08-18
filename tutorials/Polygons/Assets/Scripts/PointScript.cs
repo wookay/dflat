@@ -7,10 +7,12 @@ using System.Collections;
 public class PointScript : MonoBehaviour {
 	
 	GameObject line;
+	GameObject label;
 	
 	// Use this for initialization
 	void Start () {
 		line = GameObject.Find("Line");
+		label = GameObject.Find("Label");
 	}
 	
 	// Update is called once per frame
@@ -29,12 +31,15 @@ public class PointScript : MonoBehaviour {
 			LineRenderer lineRenderer = line.GetComponent<LineRenderer>();
 			if ("PointA" == gameObject.name) {
 				lineRenderer.SetPosition(0, curPosition);
-				lineRenderer.SetPosition(3, curPosition);
 			} else if ("PointB" == gameObject.name) {
 				lineRenderer.SetPosition(1, curPosition);
 			} else if ("PointC" == gameObject.name) {
 				lineRenderer.SetPosition(2, curPosition);
+			} else if ("PointD" == gameObject.name) {
+				lineRenderer.SetPosition(3, curPosition);
 			}
+			GUIText guiText = label.GetComponent<GUIText>();
+			guiText.text = gameObject.name + " " + curPosition.ToString();
 
 			yield return null;
 		}

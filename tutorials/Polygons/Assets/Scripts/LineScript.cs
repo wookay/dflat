@@ -13,7 +13,7 @@ public class LineScript : MonoBehaviour {
 		lineRenderer.SetPosition(0, GameObject.Find("PointA").transform.position);
 		lineRenderer.SetPosition(1, GameObject.Find("PointB").transform.position);
 		lineRenderer.SetPosition(2, GameObject.Find("PointC").transform.position);
-		lineRenderer.SetPosition(3, GameObject.Find("PointA").transform.position);
+		lineRenderer.SetPosition(3, GameObject.Find("PointD").transform.position);
 	}
 	
 	// Update is called once per frame
