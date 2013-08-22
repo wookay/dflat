@@ -15,7 +15,13 @@ public class TextViewScript : MonoBehaviour {
 	void Update () {
 	}
 	
+	private Vector2 scrollViewVector = Vector2.zero;
+	
 	void OnGUI() {
-		text = GUI.TextField(new Rect (10, 10, 400, 400), text, 9999999, guiStyle);
+		scrollViewVector = GUI.BeginScrollView (new Rect (10, 10, 420, 380), scrollViewVector, new Rect (10, 10, 400, 1000));
+		
+		text = GUI.TextArea(new Rect (10, 10, 400, 1000), text, 9999999, guiStyle);
+			
+		GUI.EndScrollView();
 	}
 }
