@@ -1,0 +1,17 @@
+language: csharp
+mono:
+  - latest
+
+notifications:
+  email: false
+
+before_install:
+  - "cd Test"
+
+solution: ./Test.sln
+
+script:
+  - xbuild ./Test.sln
+
+after_script:
+  - nunit-console Test/bin/Debug/Test.exe
