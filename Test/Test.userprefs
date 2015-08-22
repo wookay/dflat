@@ -1,8 +1,9 @@
 ﻿<Properties StartupItem="Test/Test.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Test/Program.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="../programs/TestExamReport.cs">
     <Files>
       <File FileName="Test/Program.cs" Line="13" Column="1" />
+      <File FileName="../programs/TestExamReport.cs" Line="26" Column="4" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

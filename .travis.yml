@@ -16,7 +16,7 @@ install:
 
 script:
   - xbuild /p:Configuration=Release ./Test.sln
-  - mono ./testrunner/NUnit.Runners.2.6.4/tools/nunit-console.exe ./Test/bin/Release/Test.exe
+  - mono ./testrunner/NUnit.Runners.2.6.4/tools/nunit-console.exe -labels -nologo ./Test/bin/Release/Test.exe
 
 after_script:
   - nunit-console Test/bin/Release/Test.exe
