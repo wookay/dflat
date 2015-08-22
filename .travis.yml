@@ -10,8 +10,13 @@ before_install:
 
 solution: ./Test.sln
 
+install:
+  - nuget restore ./Test.sln
+  - nuget install NUnit.Runners -Version 2.6.4 -OutputDirectory testrunner
+
 script:
-  - xbuild ./Test.sln
+  - xbuild /p:Configuration=Release ./Test.sln
+  - mono ./testrunner/NUnit.Runners.2.6.4/tools/nunit-console.exe ./Test/bin/Release/Test.exe
 
 after_script:
-  - nunit-console Test/bin/Debug/Test.exe
+  - nunit-console Test/bin/Release/Test.exe

@@ -31,10 +31,43 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="nunit.framework">
+      <HintPath>..\packages\NUnit.2.6.4\lib\nunit.framework.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="..\..\programs\ExamReport.cs">
+      <Link>programs\ExamReport.cs</Link>
+    </Compile>
+    <Compile Include="..\..\programs\Hangul.cs">
+      <Link>programs\Hangul.cs</Link>
+    </Compile>
+    <Compile Include="..\..\programs\MultiTable.cs">
+      <Link>programs\MultiTable.cs</Link>
+    </Compile>
+    <Compile Include="..\..\programs\StarDrawing.cs">
+      <Link>programs\StarDrawing.cs</Link>
+    </Compile>
+    <Compile Include="..\..\programs\TestExamReport.cs">
+      <Link>programs\TestExamReport.cs</Link>
+    </Compile>
+    <Compile Include="..\..\programs\TestHangul.cs">
+      <Link>programs\TestHangul.cs</Link>
+    </Compile>
+    <Compile Include="..\..\programs\TestMultiTable.cs">
+      <Link>programs\TestMultiTable.cs</Link>
+    </Compile>
+    <Compile Include="..\..\programs\TestStarDrawing.cs">
+      <Link>programs\TestStarDrawing.cs</Link>
+    </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Folder Include="programs\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
 </Project>
